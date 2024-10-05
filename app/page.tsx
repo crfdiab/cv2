@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { buttonVariants } from "@/components/ui/button";   
 
 export default function Home() {
@@ -9,7 +8,7 @@ export default function Home() {
           AI Curator
       </h1>
       <p className="max-w-[600px] text-foreground mb-8 sm:text-base">
-        AI Directory Of Curated <b>AI Tools</b> Organized By Category, Pricing, Features, and More. As AI Tools Are Growing Exponentially, It's Hard To Keep Up. We've Solved This By Creating A Curated Directory Of AI Tools.
+        AI Directory Of Curated <b>AI Tools</b> Organized By Category, Pricing, Features, and More. As AI Tools Are Growing Exponentially, It&apos;s Hard To Keep Up. We&apos;ve Solved This By Creating A Curated Directory Of AI Tools.
       </p>
       <div className="flex items-center gap-5">
         <Link
