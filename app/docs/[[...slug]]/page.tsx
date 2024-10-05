@@ -61,6 +61,9 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
     ...(lastUpdated && {
       lastModified: new Date(lastUpdated).toISOString(),
     }),
+    alternates: {
+      canonical: `${Settings.metadataBase}/docs/${pathName}`,
+    },
   };
 }
 
