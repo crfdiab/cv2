@@ -45,7 +45,7 @@ type BaseMdxFrontmatter = {
 
 const computeDocumentPath = (slug: string) => {
   return Settings.gitload
-    ? `${GitHubLink.href}/raw/main/contents/ai-tools/${slug}/index.mdx`
+    ? `${GitHubLink.href}/contents/ai-tools/${slug}/index.mdx`
     : path.join(process.cwd(), "/contents/ai-tools/", `${slug}/index.mdx`);
 };
 
@@ -100,7 +100,7 @@ export async function getTable(slug: string): Promise<Array<{ level: number; tex
   let rawMdx = "";
 
   if (Settings.gitload) {
-    const contentPath = `${GitHubLink.href}/raw/main/contents/ai-tools/${slug}/index.mdx`;
+    const contentPath = `${GitHubLink.href}/contents/ai-tools/${slug}/index.mdx`;
     try {
       const response = await fetch(contentPath);
       if (!response.ok) {
