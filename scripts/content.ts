@@ -11,7 +11,7 @@ import { visit } from "unist-util-visit";
 import { Documents } from '@/settings/documents';
 import { Paths } from "@/lib/pageroutes";
 
-const docsDir = path.join(process.cwd(), "contents/docs");
+const docsDir = path.join(process.cwd(), "contents/ai-tools");
 const outputDir = path.join(process.cwd(), "public", "search-data");
 
 function isRoute(node: Paths): node is Extract<Paths, { href: string; title: string }> {
