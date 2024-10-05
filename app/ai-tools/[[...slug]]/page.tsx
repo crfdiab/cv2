@@ -54,6 +54,9 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
 
   const { frontmatter, lastUpdated } = res;
 
+  // Determine if this is the root /ai-tools page
+  const isRootAiToolsPage = slug.length === 0;
+
   return {
     title: `${frontmatter.title} - ${Settings.title}`,
     description: frontmatter.description,
@@ -62,7 +65,9 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
       lastModified: new Date(lastUpdated).toISOString(),
     }),
     alternates: {
-      canonical: `${Settings.metadataBase}/docs/${pathName}`,
+      canonical: isRootAiToolsPage
+        ? `${Settings.metadataBase}/ai-tools`
+        : `${Settings.metadataBase}/ai-tools/${pathName}`,
     },
   };
 }

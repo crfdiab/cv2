@@ -6,7 +6,7 @@ import SubLink from "@/components/navigation/sublink";
 
 export default function PageMenu({ isSheet = false }) {
   const pathname = usePathname();
-  if (!pathname.startsWith("/docs")) return null;
+  if (!pathname.startsWith("/ai-tools")) return null;
 
   return (
     <div className="flex flex-col gap-3.5 mt-5 pb-6">
@@ -24,7 +24,7 @@ export default function PageMenu({ isSheet = false }) {
             <SubLink
               {...{
                 ...item,
-                href: `/docs${item.href}`,
+                href: `/ai-tools${item.href}`,
                 level: 0,
                 isSheet,
               }}
