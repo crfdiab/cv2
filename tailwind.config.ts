@@ -60,7 +60,7 @@ const config = {
       },
       fontFamily: {
         code: ["var(--font-geist-mono)"],
-        regular: ["var(--font-geist-sans)"],
+        regular: ["Lexend", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
