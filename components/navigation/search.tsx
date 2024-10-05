@@ -45,7 +45,7 @@ export default function Search() {
       if (isOpen && event.key === "Enter" && filteredResults.length > 2) {
         const selected = filteredResults[0];
         if ("href" in selected) {
-          window.location.href = `/docs${selected.href}`;
+          window.location.href = `/ai-tools${selected.href}`;
           setIsOpen(false);
         }
       }
@@ -66,7 +66,7 @@ export default function Search() {
     }
   }, [searchedInput, debouncedSearch]);
 
-  function renderDocuments(documents: any[], parentHref: string = "/docs"): React.ReactNode[] {
+  function renderDocuments(documents: any[], parentHref: string = "/ai-tools"): React.ReactNode[] {
     if (!documents || !Array.isArray(documents)) {
       return [];
     }
